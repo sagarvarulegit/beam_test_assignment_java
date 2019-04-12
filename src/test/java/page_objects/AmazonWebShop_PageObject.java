@@ -32,6 +32,10 @@ public class AmazonWebShop_PageObject extends PageObject {
         this.button_go.click();
     }
 
+    public void visitHomepage(){
+        driver.get("http://www.amazon.com");
+    }
+
     public void addProductToCart(String price){
         for (WebElement element_price: span_price_tag) {
             if (element_price.getText().equals(price)){
